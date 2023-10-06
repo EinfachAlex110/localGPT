@@ -1,33 +1,33 @@
-# LocalGPT: Secure, Local Conversations with Your Documents 🌐
+# LocalGPT: Sichere, lokale Gespräche mit Ihren Dokumenten 🌐
 
-**LocalGPT** is an open-source initiative that allows you to converse with your documents without compromising your privacy. With everything running locally, you can be assured that no data ever leaves your computer. Dive into the world of secure, local document interactions with LocalGPT.
+**LocalGPT** ist eine Open-Source-Initiative, die es ermöglicht, mit Ihren Dokumenten zu kommunizieren, ohne Ihre Privatsphäre zu gefährden. Da alles lokal ausgeführt wird, können Sie sicher sein, dass keine Daten Ihren Computer verlassen. Tauchen Sie ein in die Welt sicherer, lokaler Dokumenteninteraktionen mit LocalGPT.
 
-## Features 🌟
-- **Utmost Privacy**: Your data remains on your computer, ensuring 100% security.
-- **Versatile Model Support**: Seamlessly integrate a variety of open-source models, including HF, GPTQ, GGML, and GGUF.
-- **Diverse Embeddings**: Choose from a range of open-source embeddings.
-- **Reuse Your LLM**: Once downloaded, reuse your LLM without the need for repeated downloads.
-- **Chat History**: Remembers your previous conversations (in a session).
-- **API**: LocalGPT has an API that you can use for building RAG Applications.
-- **Graphical Interface**: LocalGPT comes with two GUIs, one uses the API and the other is standalone (based on streamlit).
-- **GPU, CPU & MPS Support**: Supports multiple platforms out of the box, Chat with your data using `CUDA`, `CPU` or `MPS` and more!
+## Eigenschaften 🌟
+- **Höchste Privatsphäre**: Ihre Daten bleiben auf Ihrem Computer und gewährleisten 100% Sicherheit.
+- **Vielseitige Modellunterstützung**: Integrieren Sie nahtlos eine Vielzahl von Open-Source-Modellen, einschließlich HF, GPTQ, GGML und GGUF.
+- **Vielfältige Einbettungen**: Wählen Sie aus einer Reihe von Open-Source-Einbettungen.
+- **Wiederverwendung Ihres LLM**: Nach dem Herunterladen können Sie Ihr LLM wieder verwenden, ohne es erneut herunterladen zu müssen.
+- **Chat-Verlauf**: Erinnert sich an Ihre vorherigen Gespräche (in einer Sitzung).
+- **API**: LocalGPT verfügt über eine API, die Sie zum Erstellen von RAG-Anwendungen verwenden können.
+- **Grafische Benutzeroberfläche**: LocalGPT wird mit zwei GUIs geliefert, eine verwendet die API und die andere ist eigenständig (basierend auf Streamlit).
+- **GPU, CPU & MPS-Unterstützung**: Unterstützt mehrere Plattformen Out of the Box. Unterhalten Sie sich mit Ihren Daten unter Verwendung von `CUDA`, `CPU` oder `MPS` und mehr!
 
-## Dive Deeper with Our Videos 🎥
-- [Detailed code-walkthrough](https://youtu.be/MlyoObdIHyo)
-- [Llama-2 with LocalGPT](https://youtu.be/lbFmceo4D5E)
-- [Adding Chat History](https://youtu.be/d7otIM_MCZs)
-- [LocalGPT - Updated (09/17/2023)](https://youtu.be/G_prHSKX9d4)
+## Tauchen Sie tiefer ein mit unseren Videos 🎥
+- [Detaillierte Code-Durchsicht](https://youtu.be/MlyoObdIHyo)
+- [Llama-2 mit LocalGPT](https://youtu.be/lbFmceo4D5E)
+- [Chat-Verlauf hinzufügen](https://youtu.be/d7otIM_MCZs)
+- [LocalGPT - Aktualisiert (17.09.2023)](https://youtu.be/G_prHSKX9d4)
 
-## Technical Details 🛠️
-By selecting the right local models and the power of `LangChain` you can run the entire RAG pipeline locally, without any data leaving your environment, and with reasonable performance.
+## Technische Details 🛠️
+Durch die Auswahl der richtigen lokalen Modelle und die Kraft von `LangChain` können Sie die gesamte RAG-Pipeline lokal ausführen, ohne dass Daten Ihre Umgebung verlassen, und das mit akzeptabler Leistung.
 
-- `ingest.py` uses `LangChain` tools to parse the document and create embeddings locally using `InstructorEmbeddings`. It then stores the result in a local vector database using `Chroma` vector store.
-- `run_localGPT.py` uses a local LLM to understand questions and create answers. The context for the answers is extracted from the local vector store using a similarity search to locate the right piece of context from the docs.
-- You can replace this local LLM with any other LLM from the HuggingFace. Make sure whatever LLM you select is in the HF format.
+- `ingest.py` verwendet `LangChain`-Werkzeuge, um das Dokument zu analysieren und Einbettungen lokal mit `InstructorEmbeddings` zu erstellen. Anschließend wird das Ergebnis in einer lokalen Vektordatenbank mit `Chroma` Vektor-Speicher gespeichert.
+- `run_localGPT.py` verwendet ein lokales LLM, um Fragen zu verstehen und Antworten zu erstellen. Der Kontext für die Antworten wird aus dem lokalen Vektor-Speicher extrahiert, indem eine Ähnlichkeitssuche durchgeführt wird, um den richtigen Kontextteil aus den Dokumenten zu finden.
+- Sie können dieses lokale LLM durch jedes andere LLM von HuggingFace ersetzen. Stellen Sie sicher, dass das LLM, das Sie auswählen, im HF-Format ist.
 
-This project was inspired by the original [privateGPT](https://github.com/imartinez/privateGPT).
+Dieses Projekt wurde inspiriert vom Original [privateGPT](https://github.com/imartinez/privateGPT).
 
-## Built Using 🧩
+## Gebaut mit 🧩
 - [LangChain](https://github.com/hwchase17/langchain)
 - [HuggingFace LLMs](https://huggingface.co/models)
 - [InstructorEmbeddings](https://instructor-embedding.github.io/)
@@ -35,69 +35,70 @@ This project was inspired by the original [privateGPT](https://github.com/imarti
 - [ChromaDB](https://www.trychroma.com/)
 - [Streamlit](https://streamlit.io/)
 
-# Environment Setup 🌍
+# Umgebungseinrichtung 🌍
 
-1. 📥 Clone the repo using git:
+1. 📥 Klone das Repo mit git:
 
 ```shell
 git clone https://github.com/PromtEngineer/localGPT.git
 ```
 
-2. 🐍 Install [conda](https://www.anaconda.com/download) for virtual environment management. Create and activate a new virtual environment.
+2. 🐍 Installiere [conda](https://www.anaconda.com/download) für die Verwaltung virtueller Umgebungen. Erstelle und aktiviere eine neue virtuelle Umgebung.
 
 ```shell
 conda create -n localGPT python=3.10.0
 conda activate localGPT
 ```
 
-3. 🛠️ Install the dependencies using pip
+3. 🛠️ Installiere die Abhängigkeiten mit pip
 
-To set up your environment to run the code, first install all requirements:
+Richten Sie Ihre Umgebung ein, um den Code auszuführen, und installieren Sie zunächst alle Anforderungen:
 
 ```shell
 pip install -r requirements.txt
 ```
 
-***Installing LLAMA-CPP :***
+***LLAMA-CPP installieren:***
 
-LocalGPT uses [LlamaCpp-Python](https://github.com/abetlen/llama-cpp-python) for GGML (you will need llama-cpp-python <=0.1.76) and GGUF (llama-cpp-python >=0.1.83) models.
+LocalGPT verwendet [LlamaCpp-Python](https://github.com/abetlen/llama-cpp-python) für GGML (Sie benötigen llama-cpp-python <=0.1.76) und GGUF (llama-cpp-python >=0.1.83) Modelle.
 
+Falls Sie BLAS oder Metal mit [llama-cpp](https://github.com/abetlen/llama-cpp-python#installation-with-openblas--cublas--clblast--metal) verwenden möchten, können Sie entsprechende Flags setzen:
 
-If you want to use BLAS or Metal with [llama-cpp](https://github.com/abetlen/llama-cpp-python#installation-with-openblas--cublas--clblast--metal) you can set appropriate flags:
-
-For `NVIDIA` GPUs support, use `cuBLAS`
+Für `NVIDIA` GPUs-Unterstützung verwenden Sie `cuBLAS`
 
 ```shell
-# Example: cuBLAS
+# Beispiel: cuBLAS
 CMAKE_ARGS="-DLLAMA_CUBLAS=on" FORCE_CMAKE=1 pip install llama-cpp-python==0.1.83 --no-cache-dir
 ```
 
-For Apple Metal (`M1/M2`) support, use
+Für Apple Metal (`M1/M2`) Unterstützung verwenden Sie
 
 ```shell
-# Example: METAL
+# Beispiel: METAL
 CMAKE_ARGS="-DLLAMA_METAL=on"  FORCE_CMAKE=1 pip install llama-cpp-python==0.1.83 --no-cache-dir
 ```
-For more details, please refer to [llama-cpp](https://github.com/abetlen/llama-cpp-python#installation-with-openblas--cublas--clblast--metal)
+Weitere Details finden Sie unter [llama-cpp](https://github.com/abetlen/llama-cpp-python#installation-with-openblas--cublas--clblast--metal).
 
 ## Docker 🐳
 
-Installing the required packages for GPU inference on NVIDIA GPUs, like gcc 11 and CUDA 11, may cause conflicts with other packages in your system.
-As an alternative to Conda, you can use Docker with the provided Dockerfile.
-It includes CUDA, your system just needs Docker, BuildKit, your NVIDIA GPU driver and the NVIDIA container toolkit.
-Build as `docker build . -t localgpt`, requires BuildKit.
-Docker BuildKit does not support GPU during *docker build* time right now, only during *docker run*.
-Run as `docker run -it --mount src="$HOME/.cache",target=/root/.cache,type=bind --gpus=all localgpt`.
+Das Installieren der benötigten Pakete für GPU-Inferenzen auf NVIDIA-GPUs, wie gcc 11 und CUDA 11, kann zu Konflikten mit anderen Paketen in Ihrem System führen.
+Als Alternative zu Conda können Sie Docker mit der bereitgestellten Dockerfile verwenden.
+Es beinhaltet CUDA, Ihr System benötigt nur Docker, BuildKit, Ihren NVIDIA GPU-Treiber und das NVIDIA Container Toolkit.
+Bauen als `docker build . -t localgpt`, erfordert BuildKit.
+Docker BuildKit unterstützt GPU während der *docker build*-Zeit derzeit nicht, nur während der *docker run*.
+Ausführen als `docker run -it --mount src="$HOME/.cache",target=/root/.cache,type=bind --gpus=all localgpt`.
 
-## Test dataset
+## Testdatensatz
 
-For testing, this repository comes with [Constitution of USA](https://constitutioncenter.org/media/files/constitution.pdf) as an example file to use.
 
-## Ingesting your OWN Data.
-Put you files in the `SOURCE_DOCUMENTS` folder. You can put multiple folders within the `SOURCE_DOCUMENTS` folder and the code will recursively read your files.
 
-### Support file formats:
-LocalGPT currently supports the following file formats. LocalGPT uses `LangChain` for loading these file formats. The code in `constants.py` uses a `DOCUMENT_MAP` dictionary to map a file format to the corresponding loader. In order to add support for another file format, simply add this dictionary with the file format and the corresponding loader from [LangChain](https://python.langchain.com/docs/modules/data_connection/document_loaders/).
+Zum Testen wird dieses Repository mit der [Verfassung der USA](https://constitutioncenter.org/media/files/constitution.pdf) als Beispiel-Datei geliefert.
+
+## Ihre EIGENEN Daten einpflegen.
+Legen Sie Ihre Dateien in den Ordner `SOURCE_DOCUMENTS`. Sie können mehrere Ordner innerhalb des Ordners `SOURCE_DOCUMENTS` anlegen und der Code wird Ihre Dateien rekursiv lesen.
+
+### Unterstützte Dateiformate:
+LocalGPT unterstützt derzeit die folgenden Dateiformate. LocalGPT verwendet `LangChain` zum Laden dieser Dateiformate. Der Code in `constants.py` verwendet ein `DOCUMENT_MAP`-Wörterbuch, um ein Dateiformat dem entsprechenden Loader zuzuordnen. Um die Unterstützung für ein weiteres Dateiformat hinzuzufügen, fügen Sie einfach dieses Wörterbuch mit dem Dateiformat und dem entsprechenden Loader aus [LangChain](https://python.langchain.com/docs/modules/data_connection/document_loaders/) hinzu.
 
 ```shell
 DOCUMENT_MAP = {
@@ -115,207 +116,174 @@ DOCUMENT_MAP = {
 
 ### Ingest
 
-Run the following command to ingest all the data.
+Führen Sie den folgenden Befehl aus, um alle Daten einzupflegen.
 
-If you have `cuda` setup on your system.
+Wenn Sie `cuda` auf Ihrem System eingerichtet haben.
 
 ```shell
 python ingest.py
 ```
-You will see an output like this:
+Sie werden eine Ausgabe wie diese sehen:
 <img width="1110" alt="Screenshot 2023-09-14 at 3 36 27 PM" src="https://github.com/PromtEngineer/localGPT/assets/134474669/c9274e9a-842c-49b9-8d95-606c3d80011f">
 
 
-Use the device type argument to specify a given device.
-To run on `cpu`
+Verwenden Sie das Argument `device_type`, um einen bestimmten Gerätetyp anzugeben.
+Zum Ausführen auf `cpu`
 
 ```sh
 python ingest.py --device_type cpu
 ```
 
-To run on `M1/M2`
+Zum Ausführen auf `M1/M2`
 
 ```sh
 python ingest.py --device_type mps
 ```
 
-Use help for a full list of supported devices.
+Verwenden Sie `help` für eine vollständige Liste der unterstützten Geräte.
 
 ```sh
 python ingest.py --help
 ```
 
-This will create a new folder called `DB` and use it for the newly created vector store. You can ingest as many documents as you want, and all will be accumulated in the local embeddings database.
-If you want to start from an empty database, delete the `DB` and reingest your documents.
+Dies wird einen neuen Ordner namens `DB` erstellen und ihn für den neu erstellten Vektor-Speicher verwenden. Sie können so viele Dokumente einpflegen, wie Sie möchten, und alle werden in der lokalen Einbettungsdatenbank angesammelt.
+Wenn Sie von einer leeren Datenbank aus starten möchten, löschen Sie die `DB` und nehmen Sie die Einpflege Ihrer Dokumente erneut vor.
 
-Note: When you run this for the first time, it will need internet access to download the embedding model (default: `Instructor Embedding`). In the subsequent runs, no data will leave your local environment and you can ingest data without internet connection.
+Hinweis: Wenn Sie dies zum ersten Mal ausführen, benötigen Sie Internetzugang, um das Einbettungsmodell herunterzuladen (Standard: `Instructor Embedding`). In den folgenden Läufen werden keine Daten Ihre lokale Umgebung verlassen und Sie können Daten ohne Internetverbindung einpflegen.
 
-## Ask questions to your documents, locally!
+## Stellen Sie Ihren Dokumenten Fragen, lokal!
 
-In order to chat with your documents, run the following command (by default, it will run on `cuda`).
+Um mit Ihren Dokumenten zu chatten, führen Sie den folgenden Befehl aus (standardmäßig wird es auf `cuda` ausgeführt).
 
 ```shell
 python run_localGPT.py
 ```
-You can also specify the device type just like `ingest.py`
+Sie können auch den Gerätetyp angeben, genau wie `ingest.py`
 
 ```shell
-python run_localGPT.py --device_type mps # to run on Apple silicon
+python run_localGPT.py --device_type mps # zum Ausführen auf Apple Silicon
 ```
 
-This will load the ingested vector store and embedding model. You will be presented with a prompt:
+Dies wird den eingepflegten Vektor-Speicher und das Einbettungsmodell laden. Ihnen wird eine Aufforderung präsentiert:
 
 ```shell
-> Enter a query:
+> Geben Sie eine Abfrage ein:
 ```
 
-After typing your question, hit enter. LocalGPT will take some time based on your hardware. You will get a response like this below.
+Nachdem Sie Ihre Frage eingegeben haben, drücken Sie die Eingabetaste. LocalGPT wird je nach Ihrer Hardware einige Zeit in Anspruch nehmen. Sie erhalten eine Antwort wie die untenstehende.
 <img width="1312" alt="Screenshot 2023-09-14 at 3 33 19 PM" src="https://github.com/PromtEngineer/localGPT/assets/134474669/a7268de9-ade0-420b-a00b-ed12207dbe41">
 
-Once the answer is generated, you can then ask another question without re-running the script, just wait for the prompt again.
+Sobald die Antwort generiert wurde, können Sie eine weitere Frage stellen, ohne das Skript erneut auszuführen. Warten Sie einfach auf die Aufforderung.
 
+***Hinweis:*** Wenn Sie dies zum ersten Mal ausführen, benötigen Sie eine Internetverbindung, um das LLM herunterzuladen (Standard: `TheBloke/Llama-2-7b-Chat-GGUF`). Danach können Sie Ihre Internetverbindung ausschalten und die Skriptinferenz würde immer noch funktionieren. Es gelangen keine Daten aus Ihrer lokalen Umgebung heraus.
 
-***Note:*** When you run this for the first time, it will need internet connection to download the LLM (default: `TheBloke/Llama-2-7b-Chat-GGUF`). After that you can turn off your internet connection, and the script inference would still work. No data gets out of your local environment.
+Geben Sie `exit` ein, um das Skript zu beenden.
 
-Type `exit` to finish the script.
+### Zusätzliche Optionen mit run_localGPT.py
 
-### Extra Options with run_localGPT.py
-
-You can use the `--show_sources` flag with `run_localGPT.py` to show which chunks were retrieved by the embedding model. By default, it will show 4 different sources/chunks. You can change the number of sources/chunks
+Sie können die Flag `--show_sources` mit `run_localGPT.py` verwenden, um anzuzeigen, welche Blöcke vom Einbettungsmodell abgerufen wurden. Standardmäßig werden 4 verschiedene Quellen/Blöcke angezeigt. Sie können die Anzahl der Quellen/Blöcke ändern
 
 ```shell
 python run_localGPT.py --show_sources
 ```
 
-Another option is to enable chat history. ***Note***: This is disabled by default and can be enabled by using the  `--use_history` flag. The context window is limited so keep in mind enabling history will use it and might overflow.
+Eine andere Option ist die Aktivierung des Chat-Verlaufs. ***Hinweis***: Dies ist standardmäßig deaktiviert und kann durch Verwendung der Flag `--use_history` aktiviert werden. Das Kontextfenster ist begrenzt, so dass das Aktivieren des Verlaufs es verwenden und möglicherweise überlaufen kann.
 
 ```shell
 python run_localGPT.py --use_history
 ```
 
+# Starten der grafischen Benutzeroberfläche
 
-# Run the Graphical User Interface
+1. Öffnen
 
-1. Open `constants.py` in an editor of your choice and depending on choice add the LLM you want to use. By default, the following model will be used:
+ Sie `constants.py` in einem Editor Ihrer Wahl und fügen Sie je nach Wahl das LLM hinzu, das Sie verwenden möchten. Standardmäßig wird das folgende Modell verwendet:
 
    ```shell
    MODEL_ID = "TheBloke/Llama-2-7b-Chat-GGUF"
    MODEL_BASENAME = "llama-2-7b-chat.Q4_K_M.gguf"
    ```
 
-3. Open up a terminal and activate your python environment that contains the dependencies installed from requirements.txt.
+3. Öffnen Sie ein Terminal und aktivieren Sie Ihre Python-Umgebung, die die in requirements.txt installierten Abhängigkeiten enthält.
 
-4. Navigate to the `/LOCALGPT` directory.
+4. Navigieren Sie zum Verzeichnis `/LOCALGPT`.
 
-5. Run the following command `python run_localGPT_API.py`. The API should being to run.
+5. Führen Sie den folgenden Befehl aus: `python run_localGPT_API.py`. Die API sollte zu laufen beginnen.
 
-6. Wait until everything has loaded in. You should see something like `INFO:werkzeug:Press CTRL+C to quit`.
+6. Warten Sie, bis alles geladen ist. Sie sollten so etwas sehen wie `INFO:werkzeug:Press CTRL+C to quit`.
 
-7. Open up a second terminal and activate the same python environment.
+7. Öffnen Sie ein zweites Terminal und aktivieren Sie dieselbe Python-Umgebung.
 
-8. Navigate to the `/LOCALGPT/localGPTUI` directory.
+8. Navigieren Sie zum Verzeichnis `/LOCALGPT/localGPTUI`.
 
-9. Run the command `python localGPTUI.py`.
+9. Führen Sie den Befehl `python localGPTUI.py` aus.
 
-10. Open up a web browser and go the address `http://localhost:5111/`.
+10. Öffnen Sie einen Webbrowser und gehen Sie zur Adresse `http://localhost:5111/`.
 
 
-# How to select different LLM models?
+# Wie wählt man unterschiedliche LLM-Modelle aus?
 
-To change the models you will need to set both `MODEL_ID` and `MODEL_BASENAME`.
+Um die Modelle zu ändern, müssen Sie sowohl `MODEL_ID` als auch `MODEL_BASENAME` festlegen.
 
-1. Open up `constants.py` in the editor of your choice.
-2. Change the `MODEL_ID` and `MODEL_BASENAME`. If you are using a quantized model (`GGML`, `GPTQ`, `GGUF`), you will need to provide `MODEL_BASENAME`. For unquantized models, set `MODEL_BASENAME` to `NONE`
-5. There are a number of example models from HuggingFace that have already been tested to be run with the original trained model (ending with HF or have a .bin in its "Files and versions"), and quantized models (ending with GPTQ or have a .no-act-order or .safetensors in its "Files and versions").
-6. For models that end with HF or have a .bin inside its "Files and versions" on its HuggingFace page.
+1. Öffnen Sie `constants.py` in dem Editor Ihrer Wahl.
+2. Ändern Sie `MODEL_ID` und `MODEL_BASENAME`. Wenn Sie ein quantisiertes Modell verwenden (`GGML`, `GPTQ`, `GGUF`), müssen Sie `MODEL_BASENAME` angeben. Bei nicht quantisierten Modellen setzen Sie `MODEL_BASENAME` auf `NONE`
+5. Es gibt eine Reihe von Beispielmodellen von HuggingFace, die bereits getestet wurden, um mit dem ursprünglich trainierten Modell (Endung mit HF oder haben eine .bin in seinen "Dateien und Versionen") und quantisierten Modellen (Endung mit GPTQ oder haben eine .no-act-order oder .safetensors in seinen "Dateien und Versionen") ausgeführt zu werden.
+6. Für Modelle, die mit HF enden oder eine .bin in ihren "Dateien und Versionen" auf ihrer HuggingFace-Seite haben.
 
-   - Make sure you have a `MODEL_ID` selected. For example -> `MODEL_ID = "TheBloke/guanaco-7B-HF"`
-   - Go to the [HuggingFace Repo](https://huggingface.co/TheBloke/guanaco-7B-HF)
+   - Stellen Sie sicher, dass Sie ein `MODEL_ID` ausgewählt haben. Zum Beispiel -> `MODEL_ID = "TheBloke/guanaco-7B-HF"`
+   - Gehen Sie zur [HuggingFace Repo](https://huggingface.co/TheBloke/guanaco-7B-HF)
 
-7. For models that contain GPTQ in its name and or have a .no-act-order or .safetensors extension inside its "Files and versions on its HuggingFace page.
+7. Für Modelle, die GPTQ in ihrem Namen enthalten und/oder eine .no-act-order oder .safetensors-Erweiterung in ihren "Dateien und Versionen" auf ihrer HuggingFace-Seite haben.
 
-   - Make sure you have a `MODEL_ID` selected. For example -> model_id = `"TheBloke/wizardLM-7B-GPTQ"`
-   - Got to the corresponding [HuggingFace Repo](https://huggingface.co/TheBloke/wizardLM-7B-GPTQ) and select "Files and versions".
-   - Pick one of the model names and set it as  `MODEL_BASENAME`. For example -> `MODEL_BASENAME = "wizardLM-7B-GPTQ-4bit.compat.no-act-order.safetensors"`
+   - Stellen Sie sicher, dass Sie ein `MODEL_ID` ausgewählt haben. Zum Beispiel -> model_id = `"TheBloke/wizardLM-7B-GPTQ"`
+   - Gehen Sie zur entsprechenden [HuggingFace Repo](https://huggingface.co/TheBloke/wizardLM-7B-GPTQ) und wählen Sie "Dateien und Versionen".
+   - Wählen Sie einen der Modellnamen aus und setzen Sie ihn als `MODEL_BASENAME`. Zum Beispiel -> `MODEL_BASENAME = "wizardLM-7B-GPTQ-4bit.compat.no-act-order.safetensors"`
 
-8. Follow the same steps for `GGUF` and `GGML` models.
+8. Folgen Sie den gleichen Schritten für `GGUF` und `GGML`-Modelle.
 
-# GPU and VRAM Requirements
+# GPU- und VRAM-Anforderungen
 
-Below is the VRAM requirement for different models depending on their size (Billions of parameters). The estimates in the table does not include VRAM used by the Embedding models - which use an additional 2GB-7GB of VRAM depending on the model.
+Unten finden Sie die VRAM-Anforderungen für verschiedene Modelle, abhängig von ihrer Größe (Milliarden von Parametern). Die Schätzungen in der Tabelle beinhalten nicht den VRAM, der von den Einbettungsmodellen verwendet wird - diese verwenden zusätzlich 2 GB - 7 GB VRAM, abhängig vom Modell.
 
-| Mode Size (B) | float32   | float16   | GPTQ 8bit      | GPTQ 4bit          |
+| Modellgröße (B) | float32   | float16   | GPTQ 8bit      | GPTQ 4bit          |
 | ------- | --------- | --------- | -------------- | ------------------ |
-| 7B      | 28 GB     | 14 GB     | 7 GB - 9 GB    | 3.5 GB - 5 GB      |
-| 13B     | 52 GB     | 26 GB     | 13 GB - 15 GB  | 6.5 GB - 8 GB      |
-| 32B     | 130 GB    | 65 GB     | 32.5 GB - 35 GB| 16.25 GB - 19 GB   |
-| 65B     | 260.8 GB  | 130.4 GB  | 65.2 GB - 67 GB| 32.6 GB - 35 GB    |
+| 7B      | 28 GB     | 14 GB     | 7 GB - 9 GB    | 3,5 GB - 5 GB      |
+| 13B     | 52 GB     | 26 GB     | 13 GB - 15 GB  | 6,5 GB - 8 GB      |
+| 32B     | 130 GB    | 65 GB     | 32,5 GB - 35 GB| 16,25 GB - 19 GB   |
+| 65B     | 260,8 GB  | 130,4 GB  | 65,2 GB - 67 GB| 32,6 GB - 35 GB    |
 
 
-# System Requirements
+# Systemanforderungen
 
-## Python Version
+## Python-Version
 
-To use this software, you must have Python 3.10 or later installed. Earlier versions of Python will not compile.
+Um diese Software zu verwenden, müssen Sie Python 3.10 oder eine neuere Version installiert haben. Frühere Versionen von Python werden nicht kompiliert.
 
 ## C++ Compiler
 
-If you encounter an error while building a wheel during the `pip install` process, you may need to install a C++ compiler on your computer.
+Wenn Sie während des `pip install`-Prozesses einen Fehler beim Erstellen eines Rades erhalten, müssen Sie möglicherweise einen C++-Compiler auf Ihrem Computer installieren.
 
-### For Windows 10/11
+### Für Windows 10/11
 
-To install a C++ compiler on Windows 10/11, follow these steps:
+Um einen C++-Compiler unter Windows 10/11 zu installieren, gehen Sie wie folgt vor:
 
-1. Install Visual Studio 2022.
-2. Make sure the following components are selected:
+1. Installieren Sie Visual Studio 2022.
+2. Stellen Sie sicher, dass die folgenden Komponenten ausgewählt sind:
    - Universal Windows Platform development
-   - C++ CMake tools for Windows
-3. Download the MinGW installer from the [MinGW website](https://sourceforge.net/projects/mingw/).
-4. Run the installer and select the "gcc" component.
+   - C++ CMake tools für Windows
+3. Laden Sie den MinGW-Installer von der [MinGW-Website](https://sourceforge.net/projects/mingw/) herunter.
+4. Führen Sie den Installer aus und wählen Sie die Komponente "gcc" aus.
 
-### NVIDIA Driver's Issues:
+### NVIDIA-Treiberprobleme:
 
-Follow this [page](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-22-04) to install NVIDIA Drivers.
+Folgen Sie dieser [Seite](https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-22-04), um NVIDIA-Treiber zu installieren.
 
-## Star History
+## Sternenhistorie
 
-[![Star History Chart](https://api.star-history.com/svg?repos=PromtEngineer/localGPT&type=Date)](https://star-history.com/#PromtEngineer/localGPT&Date)
+[![Sternenhistorie-Diagramm](https://api.star-history.com/svg?repos=PromtEngineer/localGPT&type=Date)](https://star-history.com/#PromtEngineer/localGPT&Date)
 
-# Disclaimer
+# Haftungsausschluss
 
-This is a test project to validate the feasibility of a fully local solution for question answering using LLMs and Vector embeddings. It is not production ready, and it is not meant to be used in production. Vicuna-7B is based on the Llama model so that has the original Llama license.
+Dies ist ein Testprojekt zur Überprüfung der Machbarkeit einer vollständig lokalen Lösung für die Beantwortung von Fragen mit LLMs und Vektoreinbettungen. Es ist nicht produktionsbereit und nicht für den Einsatz in der Produktion vorgesehen. Vicuna-7B basiert auf dem Llama-Modell, sodass es die ursprüngliche Llama-Lizenz hat.
 
-# Common Errors
-
- - [Torch not compatible with CUDA enabled](https://github.com/pytorch/pytorch/issues/30664)
-
-   -  Get CUDA version
-      ```shell
-      nvcc --version
-      ```
-      ```shell
-      nvidia-smi
-      ```
-   - Try installing PyTorch depending on your CUDA version
-      ```shell
-         conda install -c pytorch torchvision cudatoolkit=10.1 pytorch
-      ```
-   - If it doesn't work, try reinstalling
-      ```shell
-         pip uninstall torch
-         pip cache purge
-         pip install torch -f https://download.pytorch.org/whl/torch_stable.html
-      ```
-
-- [ERROR: pip's dependency resolver does not currently take into account all the packages that are installed](https://stackoverflow.com/questions/72672196/error-pips-dependency-resolver-does-not-currently-take-into-account-all-the-pa/76604141#76604141)
-  ```shell
-     pip install h5py
-     pip install typing-extensions
-     pip install wheel
-  ```
-- [Failed to import transformers](https://github.com/huggingface/transformers/issues/11262)
-  - Try re-install
-    ```shell
-       conda uninstall tokenizers, transformers
-       pip install transformers
-    ```
+# Häufig
